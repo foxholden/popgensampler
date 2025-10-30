@@ -1,0 +1,27 @@
+Package: popgensampler
+Type: Package
+Title: Sample Selection for Population Genomics Studies
+Version: 0.1.0
+Authors@R: person("Holden", "Fox"", 
+                  role = c("aut", "cre"))
+Description: Tools for ranking and selecting genomic samples based on 
+    sample site, sample quality, and age. Designed to optimize sample
+    selection for population genomics projects with budget constraints and
+    spatial clustering requirements.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.2
+Imports:
+    dplyr (>= 1.0.0),
+    tidyr (>= 1.0.0),
+    geosphere (>= 1.5.0)
+Suggests:
+    testthat (>= 3.0.0),
+    knitr,
+    rmarkdown,
+    sf,
+    rnaturalearth,
+    rnaturalearthdata,
+    plotly
+VignetteBuilder: knitr

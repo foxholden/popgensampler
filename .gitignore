@@ -1,0 +1,8 @@
+.Rhistory
+.Rdata
+.Rproj.user/
+
+# not ready
+INSTALL.md
+NEWS.md
+vignettes
