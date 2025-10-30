@@ -10,8 +10,8 @@ You can install the development version of popgensampler from your local directo
 # Install devtools if you haven't already
 install.packages("devtools")
 
-# Install popgensampler from local directory
-devtools::install_local("~/Desktop/packages/popgensampler")
+# Install from GitHub
+remotes::install_github("foxholden/popgensampler")
 ```
 
 ## Overview
