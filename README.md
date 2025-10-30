@@ -22,13 +22,13 @@ remotes::install_github("foxholden/popgensampler")
 - You need to maintain geographic representation
 - Some samples have already been sequenced
 
-The package provides three main functions:
-1. **`calculate_age()`** - Calculate sample age from collection dates
-2. **`rank_samples()`** - Rank samples based on quality, age, and sequencing status
+There are two main functions:
+2. **`rank_samples()`** - Rank samples based on tissue type, age, and sequencing status
 3. **`select_samples()`** - Select optimal samples given constraints
 
 ## Quick Start
 
+Define a grouping_variable. This could be sampling location, geographic area, or species if you have multiple species. Then rank and select. In the case that you don't haven apriori grouping variable, you can group into spatial clusters
 ```r
 library(popgensampler)
 library(dplyr)
@@ -45,7 +45,7 @@ ranked_meta <- rank_samples(metadata,
                            sample_type_col = "SampleType",
                            date_col = "CollectionDate",
                            sequenced_col = "Sequenced",
-                           sample_type_ranking = as.data.frame(SampleType = c(Best, Worst), type_rank = c(1, 2))
+                           sample_type_ranking = as.data.frame(SampleType = c(Best, Ok, Worst), type_rank = c(1, 2, 3))
                            prefer_recent = TRUE)
 
 # 3. Select samples (basic usage)
@@ -91,7 +91,7 @@ selected <- select_samples(ranked_meta,
 Samples are ranked within each cluster:
 
 1. **Already sequenced** (always highest priority)
-2. **Sample type** (quality hierarchy): user defined
+2. **Sample type** (whichever sample type(s) defined)
 3. **Sample age** (recent or old, depending on preference)
 
 ## Sample Selection Logic
@@ -132,7 +132,7 @@ Holden Fox
 
 ## Citation
 
-If you use this package in your research, please cite:
+If you find use for this package, please cite:
 
 ```
 Fox, H. (2025). popgensampler: Sample Selection for Population Genomics Studies. 
