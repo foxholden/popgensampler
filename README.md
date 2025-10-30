@@ -1,6 +1,6 @@
 # popgensampler
 
-Tools for ranking and selecting genomic samples based on geographic distance, sample quality, and age. Designed to optimize sample selection for population genomics projects with budget constraints and spatial clustering requirements.
+Rank and select samples for population genomic analyses.
 
 ## Installation
 
