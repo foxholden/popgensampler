@@ -23,8 +23,8 @@ remotes::install_github("foxholden/popgensampler")
 - Some samples have already been sequenced
 
 There are two main functions:
-2. **`rank_samples()`** - Rank samples based on tissue type, age, and sequencing status
-3. **`select_samples()`** - Select optimal samples given constraints
+ - **`rank_samples()`**, which ranks samples based on tissue type, age, and sequencing status
+ - **`select_samples()`**, which selects optimal samples across groups, given constraints
 
 ## Quick Start
 
