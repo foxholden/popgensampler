@@ -7,8 +7,8 @@ Rank and select samples for population genomic analyses.
 You can install the development version of popgensampler from your local directory:
 
 ```r
-# Install devtools if you haven't already
-install.packages("devtools")
+# Install remotes if you haven't already
+install.packages("remotes")
 
 # Install from GitHub
 remotes::install_github("foxholden/popgensampler")
