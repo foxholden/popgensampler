@@ -45,7 +45,9 @@ ranked_meta <- rank_samples(metadata,
                            sample_type_col = "SampleType",
                            date_col = "CollectionDate",
                            sequenced_col = "Sequenced",
-                           sample_type_ranking = as.data.frame(SampleType = c(Best, Ok, Worst), type_rank = c(1, 2, 3))
+                           sample_type_ranking = as.data.frame(
+                                                 SampleType = c(Best, Ok, Worst),
+                                                 type_rank = c(1, 2, 3))
                            prefer_recent = TRUE)
 
 # 3. Select samples (basic usage)
