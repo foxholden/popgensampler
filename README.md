@@ -1,6 +1,6 @@
 # popgensampler
 
-Rank and select samples for population genomic analyses.
+Sample Selection for Population Genomics Studies
 
 ## Installation
 
